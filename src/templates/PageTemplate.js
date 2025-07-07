@@ -3,7 +3,7 @@ export class PageTemplate {
 
     constructor(req) {
         this.req = req;
-        this.pageJs = '';
+        this.pageJS = '';
     }
     head() {
         return `

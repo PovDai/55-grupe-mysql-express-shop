@@ -21,7 +21,7 @@ export async function postRegister(req, res) {
     const { username, email, password } = req.body;
 
     try {
-        const sql = `SELECT * FROM users WHERE username = ? OR email = ?;`;
+        const sql = `SELECT * FROM shop WHERE username = ? OR email = ?;`;
         const [response] = await connection.execute(sql, [username, email]);
 
         if (response.length > 0) {
@@ -42,7 +42,7 @@ export async function postRegister(req, res) {
     const passwordHash = hash(password + salt);
 
     try {
-        const sql = `INSERT INTO users (username, email, salt, password_hash) VALUES (?, ?, ?, ?);`;
+        const sql = `INSERT INTO shop (username, email, salt, password_hash) VALUES (?, ?, ?, ?);`;
         const [response] = await connection.execute(sql, [username, email, salt, passwordHash]);
 
         if (response.affectedRows !== 1) {
