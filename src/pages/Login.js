@@ -2,6 +2,10 @@ import { PageTemplate } from "../templates/PageTemplate.js";
 import { loginForm } from "../ui/forms/loginForm.js";
 
 export class PageLogin extends PageTemplate{
+    constructor(req) {
+        super(req)
+        this.pageJs='login'
+    }
     main() {
         return `
         <main>

@@ -24,7 +24,7 @@ export class IsValid {
     }
 
     static username(text) {
-        const minSize = 5;
+        const minSize = 3;
         const maxSize = 20;
         const allowedSymbols = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
@@ -60,7 +60,7 @@ export class IsValid {
     }
 
     static password(text) {
-        const minSize = 6;
+        const minSize = 12;
         const maxSize = 100;
 
         if (typeof text !== 'string') {
@@ -98,6 +98,18 @@ export class IsValid {
     }
 
     static email(text) {
+        return [false, ''];
+    }
+
+    static nonEmptyString(text) {
+        if (typeof text !== 'string') {
+            return [true, 'Turi buti tekstas'];
+        }
+
+        if (text.length === 0) {
+            return [true, 'Tekstas turi buti ne tuscias'];
+        }
+
         return [false, ''];
     }
 

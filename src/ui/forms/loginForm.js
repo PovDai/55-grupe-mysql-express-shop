@@ -4,12 +4,8 @@ export function loginForm() {
             <div class="row">
                 <form class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
                     <div class="mb-4">
-                        <label for="username" class="form-label color-danger"">Username</label>
-                        <input id="username" type="text" class="form-control fs-5" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="form-label color-danger"">Email</label>
-                        <input id="email" type="email" class="form-control fs-5" required>
+                        <label for="username" class="form-label color-danger"">Username or email</label>
+                        <input id="username_or_email" type="text" class="form-control fs-5" required>
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label color-danger">Password</label>
