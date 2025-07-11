@@ -3,7 +3,7 @@ import { PageHome } from '../pages/Home.js'
 import { PageSomething } from '../pages/Something.js'
 import {PageShop} from '../pages/Shop.js'
 import { PageRegister } from '../pages/Register.js'
-import { PageLogin } from '../pages/Login.js'
+import { PageLogin } from '../pages/public/Login.js'
 import {PageList} from '../pages/List.js'
 
 export const publicRouter = express.Router();

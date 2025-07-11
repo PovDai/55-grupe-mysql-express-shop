@@ -38,6 +38,10 @@ body{
     top: 80px;
     right: 20px;
 }
+.form-control,
+.form-check-input {
+  border-color: #777;
+}
 
 @keyframes spin {
     100% {
@@ -46,5 +50,4 @@ body{
 }
 @media(max-width:780px){
  
-
 }
