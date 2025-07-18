@@ -90,6 +90,6 @@ export async function postLogin(req, res) {
         .set({ 'Set-Cookie': cookieParams.join('; ') })
         .json({
             status: 'success',
-            msg: 'Tu buvai sekmingai prijungtas prie sistemos',
+            msg: 'Man atrodo tau pavyko prisijungti vargais negalais',
         });
 }

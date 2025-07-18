@@ -1,12 +1,13 @@
-import express from 'express'
-import { PageError } from './pages/public/Error.js'
-import { publicApiRouter } from './routes/publicApiRouter.js'
-import { PORT } from './env.js'
-import { publicRouter } from './routes/publicRouter.js'
-import { cookieParser } from './middleware/cookieParser.js'
-import { isAdmin } from './middleware/isAdmin.js'
-import { adminPageRouter } from './routes/adminPageRouter.js'
-import { adminApiRouter } from './routes/adminApiRouter.js'
+import express from 'express';
+import { PageError } from './pages/public/Error.js';
+import { publicApiRouter } from './routes/publicApiRouter.js';
+import { PORT } from './env.js';
+import { publicRouter } from './routes/publicRouter.js';
+import { cookieParser } from './middleware/cookieParser.js';
+import { userData } from './middleware/userData.js';
+import { adminPageRouter } from './routes/adminPageRouter.js';
+import { isAdmin } from './middleware/isAdmin.js';
+
 
 const app = express()
 
@@ -18,8 +19,8 @@ app.use(userData);
 
 app.use('/', publicRouter);
 app.use('/api', publicApiRouter);
-app.use('/admin', isAdmin, adminPageRouter);
-app.use('/api/admin', isAdmin, adminApiRouter);
+app.use('/',isAdmin, adminPageRouter);
+
 
 
 app.use((err, req, res, next) => {

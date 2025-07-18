@@ -11,12 +11,12 @@ export async function userData(req, res, next) {
 
     try {
         const sql = `
-            SELECT users.id, users.username, users.email,
-                users.created_at AS user_created_at,
+            SELECT shop.id, shop.username, shop.email,
+                shop.created_at AS user_created_at,
                 login_tokens.created_at AS login_token_created_at
             FROM login_tokens
-            INNER JOIN users
-                ON login_tokens.user_id = users.id
+            INNER JOIN shop
+                ON login_tokens.user_id = shop.id
             WHERE token = ?;`;
         const [results] = await connection.execute(sql, [req.cookies.loginToken]);
 
