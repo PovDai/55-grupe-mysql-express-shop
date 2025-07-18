@@ -19,7 +19,7 @@ app.use(userData);
 
 app.use('/', publicRouter);
 app.use('/api', publicApiRouter);
-app.use('/',isAdmin, adminPageRouter);
+app.use('/admin',isAdmin, adminPageRouter);
 
 
 

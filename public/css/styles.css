@@ -1,6 +1,9 @@
 .color-danger{
     color:#ffc107
 }
+.back-black{
+    background-color: black;
+}
 .color-danger-button{
     color:blue;
     background-color: #ffc107;

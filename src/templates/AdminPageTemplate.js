@@ -64,7 +64,7 @@ export class AdminTemplate {
         }
 
         return `
-            <div class="container-fluid">
+            <div class="container-fluid back-black">
                 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                     <p class="col-md-4 mb-0 color-danger">&copy; 2025 Company, Inc</p>
                     <ul class="nav col-md-4 justify-content-end ">${HTML}</ul>
@@ -87,22 +87,22 @@ export class AdminTemplate {
             if (typeof item === 'string') {
                 HTML += `
                     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
-                        <span class="">${item}</span>
+                        <span style="color:blue;" class="">${item}</span>
                     </h6>`;
             } else {
                 let liHTML = '';
 
                 for (const li of item) {
                     liHTML += `
-                        <li class="nav-item">
-                            <a class="nav-link d-flex align-items-center gap-2 ${this.req.url === li.href ? 'active' : ''}" aria-current="page" href="${li.href}">
+                        <li class="nav-item ">
+                            <a class="nav-link d-flex align-items-center gap-2 color-danger ${this.req.url === li.href ? 'active' : ''}" aria-current="page" href="${li.href}">
                                 ${li.text}
                             </a>
                         </li>`;
                 }
 
                 HTML += `
-                    <ul class="nav nav-pills flex-column">
+                    <ul class="nav nav-pills flex-column back-black">
                         ${liHTML}
                     </ul>`;
             }
