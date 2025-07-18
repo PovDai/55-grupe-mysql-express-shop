@@ -28,7 +28,7 @@ app.use((err, req, res, next) => {
     return res.status(500).send('Server error');
 });
 
-app.get('*error', (req, res) => res.send(new PageError().render()))
+app.get('*error', (req, res) => res.send(new PageError(req).render()))
 
 
 

@@ -11,7 +11,7 @@ export class PageDashboard extends AdminTemplate{
 
 
         return `
-            <main class="dashboard">
+            <main>
                <div class="container">
                     <div class="row">
                         <div class="col-12">

@@ -91,5 +91,7 @@ export async function postLogin(req, res) {
         .json({
             status: 'success',
             msg: 'Man atrodo tau pavyko prisijungti vargais negalais',
+            action: 'redirect', // reikalingas kad vyktu po prisijungimo nukreipimas i admin psl. 
+            href: '/admin', // cia nuoroda kur nukreipti prisijungus. 
         });
 }

@@ -1,6 +1,9 @@
 import { PageTemplate } from "../../templates/PageTemplate.js";
 
 export class PageError extends PageTemplate{
+    constructor(req) {
+        super(req)
+    }
     main() {
        return `
         <main>

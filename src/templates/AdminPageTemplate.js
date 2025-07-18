@@ -20,7 +20,7 @@ export class AdminTemplate {
                 <meta name="apple-mobile-web-app-title" content="Coming soon" />
                 <link rel="manifest" href="/favicon/site.webmanifest" />
                 <link rel="stylesheet" href="/css/bootstrap.min.css">
-                <link rel="stylesheet" href="/css/custom.css">
+                <link rel="stylesheet" href="/css/styles.css">
             </head>`;
     }
 
@@ -30,7 +30,7 @@ export class AdminTemplate {
         for (const link of commonHeaderMenuData) {
             HTML += `
                 <li>
-                    <a href="${link.href}" class="nav-link px-2">${link.text}</a>
+                    <a href="${link.href}" class="nav-link px-2 color-danger">${link.text}</a>
                 </li>`;
         }
 
@@ -47,7 +47,7 @@ export class AdminTemplate {
                     </div>
                     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">${HTML}</ul>
                     <div class="col-md-3 text-end">
-                        <a href="/admin" class="btn btn-primary">Dashboard</a>
+                        <a href="/admin" class="btn btn-primary color-danger-button">Dashboard</a>
                     </div>
                 </header>
             </div>`;
@@ -59,15 +59,15 @@ export class AdminTemplate {
         for (const link of commonHeaderMenuData) {
             HTML += `
                 <li class="nav-item">
-                    <a href="${link.href}" class="nav-link px-2 text-body-secondary">${link.text}</a>
+                    <a href="${link.href}" class="nav-link px-2 color-danger">${link.text}</a>
                 </li>`;
         }
 
         return `
             <div class="container-fluid">
                 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                    <p class="col-md-4 mb-0 text-body-secondary">&copy; 2025 Company, Inc</p>
-                    <ul class="nav col-md-4 justify-content-end">${HTML}</ul>
+                    <p class="col-md-4 mb-0 color-danger">&copy; 2025 Company, Inc</p>
+                    <ul class="nav col-md-4 justify-content-end ">${HTML}</ul>
                 </footer>
             </div>`;
     }
@@ -87,7 +87,7 @@ export class AdminTemplate {
             if (typeof item === 'string') {
                 HTML += `
                     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
-                        <span>${item}</span>
+                        <span class="">${item}</span>
                     </h6>`;
             } else {
                 let liHTML = '';
@@ -109,7 +109,7 @@ export class AdminTemplate {
         }
 
         return `
-            <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+            <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary ">
                 <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
                     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                         ${HTML}

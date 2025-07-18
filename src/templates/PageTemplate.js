@@ -47,6 +47,20 @@ export class PageTemplate {
         <div>This is page home </div>
         `
     }
+    userMenu() {
+        if (this.req.user.isLoggedIn) {
+            return `
+                <div class="col-md-3 text-end">
+                    <a href="/admin" class="btn btn-primary">Dashboard</a>
+                </div>`;
+        }
+
+        return `
+            <div class="col-md-3 text-end">
+                <a href="/login" class="btn btn-outline-primary me-2">Login</a>
+                <a href="/register" class="btn btn-primary">Register</a>
+            </div>`;
+    }
      footer() {
             let HTML = '';
     
